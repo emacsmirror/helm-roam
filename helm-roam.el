@@ -1,7 +1,7 @@
 ;;; helm-roam.el --- Helm command for org-roam -*- lexical-binding: t -*-
 
 ;; Author: VHQR <zq_cmd@163.com>
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.1") (org "9.3") (helm "3.9.9") (org-roam "2.2.2"))
 ;; Keywords: org-mode, roam, helm, convenience
 ;; URL: https://github.com/vhqr0/helm-roam
@@ -65,7 +65,8 @@
 (defvar helm-roam-source
   (helm-build-sync-source "Roam Nodes"
     :candidates 'org-roam-node-read--completions
-    :action helm-roam-actions))
+    :action helm-roam-actions
+    :persistent-action #'helm-roam-action-find))
 
 (defvar helm-roam-dummy-source
   (helm-build-dummy-source "Roam Create Node"
