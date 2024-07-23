@@ -1,7 +1,7 @@
 ;;; helm-roam.el --- Helm command for org-roam -*- lexical-binding: t -*-
 
 ;; Author: VHQR <zq_cmd@163.com>
-;; Version: 1.0.1
+;; Version: 1.0.2
 ;; Package-Requires: ((emacs "24.1") (org "9.3") (helm "3.9.9") (org-roam "2.2.2"))
 ;; Keywords: org-mode, roam, helm, convenience
 ;; URL: https://github.com/vhqr0/helm-roam
