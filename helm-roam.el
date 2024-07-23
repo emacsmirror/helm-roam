@@ -22,7 +22,7 @@
 
 ;;; Commentary:
 ;; Helm command for org-roam, list roam nodes, find node, insert link
-;; of node, and capture to a exist or new node.  M-x helm-roam.
+;; to node, and capture to an exist or new node.  M-x helm-roam.
 
 ;;; Code:
 
@@ -38,13 +38,13 @@
   (org-roam-node-visit node t))
 
 (defun helm-roam-action-insert (node)
-  "Insert link of NODE."
+  "Insert link to NODE."
   (insert (org-link-make-string
            (concat "id:" (org-roam-node-id node))
            (org-roam-node-formatted node))))
 
 (defun helm-roam-action-capture (node)
-  "Capture to a exist NODE."
+  "Capture to an exist NODE."
   (org-roam-capture- :node node))
 
 (defun helm-roam-dummy-action-create (title)
